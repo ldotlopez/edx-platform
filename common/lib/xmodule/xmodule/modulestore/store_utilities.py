@@ -132,11 +132,17 @@ def delete_course(modulestore, contentstore, source_location, commit=False):
     # then delete all course modules
     modules = modulestore.get_items([source_location.tag, source_location.org, source_location.course, None, None, None])
 
+    course_module = None
     for module in modules:
         if module.category != 'course':   # save deleting the course module for last
             print "Deleting {0}...".format(module.location)
             if commit:
                 modulestore.delete_item(module.location)
+        else:
+            course_module = module
+
+    if course_module:
+        modulestore.delete_item(course_module.location)
 
     # finally delete the top-level course module itself
     print "Deleting {0}...".format(source_location)
