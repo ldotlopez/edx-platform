@@ -54,7 +54,7 @@ end
 desc "Run fastcgi server"
 task :runfcgi, [:system, :env, :options] => [:install_prereqs, 'assets:_watch', :predjango] do |t, args|
     args.with_defaults(:env => 'dev', :options => '')
-    sh(django_admin(args.system, args.env, 'runfcgi', args.options + "socket=/tmp/#{args.system}.#{args.env}.sock daemonize=false"))
+    sh(django_admin(args.system, args.env, 'runfcgi', args.options + " socket=/tmp/#{args.system}.#{args.env}.sock daemonize=false"))
 end
 
 desc "Reset the relational database used by django. WARNING: this will delete all of your existing users"
