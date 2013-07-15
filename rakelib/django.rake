@@ -96,12 +96,12 @@ namespace :cms do
   end
 
   desc "Delete existing MongoDB based course"
-  task :delete_course do
-
+  task :delete_course, [:env] do |t, args|
+    args.with_defaults(:env => 'dev')
     if ENV['LOC'] and ENV['COMMIT']
-        sh(django_admin(:cms, :dev, :delete_course, ENV['LOC'], ENV['COMMIT']))
+        sh(django_admin(:cms, args.env, :delete_course, ENV['LOC'], ENV['COMMIT']))
     elsif ENV['LOC']
-      sh(django_admin(:cms, :dev, :delete_course, ENV['LOC']))
+      sh(django_admin(:cms, args.env, :delete_course, ENV['LOC']))
     else
       raise "You must pass in a LOC parameter"
     end
@@ -120,8 +120,9 @@ namespace :cms do
   end
 
   desc "Imports all the templates from the code pack"
-  task :update_templates do
-    sh(django_admin(:cms, :dev, :update_templates))
+  task :update_templates, [:env] do |t, args|
+    args.with_defaults(:env => 'dev')
+    sh(django_admin(:cms, args.env, :update_templates))
   end
 
   desc "Import course data within the given DATA_DIR variable"
