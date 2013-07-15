@@ -1,3 +1,19 @@
+div.hero {
+	display: none;
+}
+
+section.highlighted-courses h2 {
+	display: none;
+}
+
+section.university-partners {
+	display: none;	
+}
+
+section.more-info {
+	display: none;
+}
+
 div.references {
 	display: none;
 }
@@ -10,6 +26,6 @@ div.colophon-about {
 	display: none;
 }
 
-.nav-colophon-02 {
+.nav-colophon-03 {
 	display: none;
 }
