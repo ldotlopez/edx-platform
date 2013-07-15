@@ -148,12 +148,12 @@
                 <img src="${static.url('images/social/email-sharing.png')}">
               </a>
             % else:
-              <a href="http://twitter.com/intent/tweet?text=I+just+registered+for+${course.number}+${get_course_about_section(course, 'title')}+through+@edxonline:+http://www.edx.org${reverse('about_course', args=[course.id])}" class="share">
+              <a href="http://twitter.com/intent/tweet?text=Me+he+inscrito+en+el+curso+${course.number}+${get_course_about_section(course, 'title')}+via+@uji_noticias+http://mooc.uji.es${reverse('about_course', args=[course.id])}" class="share">
                 <img src="${static.url('images/social/twitter-sharing.png')}">
               </a>
-              <a href="http://www.facebook.com/EdxOnline" class="share"> <img src="${static.url('images/social/facebook-sharing.png')}">
+              <a href="http://www.facebook.com/uji.esp" class="share"> <img src="${static.url('images/social/facebook-sharing.png')}">
               </a>
-              <a href="mailto:?subject=Take%20a%20course%20with%20edX%20online&body=I%20just%20registered%20for%20${course.number}%20${get_course_about_section(course, 'title')}%20through%20edX:+http://edx.org/${reverse('about_course', args=[course.id])}" class="share">
+              <a href="mailto:?subject=Curso%20UJI%20online&body=Me%20he%20inscrito%20en%20el%20curso%20de%20la%20Universitat%20Jaume%20I%20${course.number}%20${get_course_about_section(course, 'title')}:%20http://mooc.uji.es${reverse('about_course', args=[course.id])}" class="share">
                 <img src="${static.url('images/social/email-sharing.png')}">
               </a>
             % endif
