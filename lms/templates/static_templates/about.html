@@ -3,14 +3,13 @@
 
 <%inherit file="../main.html" />
 
-<%block name="title"><title>About edX</title></%block>
+<%block name="title"><title>Información</title></%block>
 
 <section class="container about">
   <nav>
-    <a href="${reverse('about_edx')}" class="active">Vision</a>
-    <a href="${reverse('faq_edx')}">Faq</a>
-    <a href="${reverse('press')}">Press</a>
-    <a href="${reverse('contact')}">Contact</a>
+    <a href="${reverse('about_edx')}" class="active">Información</a>
+    <a href="${reverse('faq_edx')}">FAQ</a>
+    <a href="${reverse('contact')}">Contacto</a>
   </nav>
 
   <section class="vision">
@@ -26,8 +25,9 @@
         <img src="${static.url('images/about_1.jpg')}">
       </div>
       <article>
-        <h2>About <span class="edx">edX</span></h2>
-        <p>EdX is a not-for-profit enterprise of its founding partners Harvard University and the Massachusetts Institute of Technology that features learning designed specifically for interactive study via the web. Based on a long history of collaboration and their shared educational missions, the founders are creating a new online-learning experience with online courses that reflect their disciplinary breadth.  Along with offering online courses, the institutions will use edX to research how students learn and how technology can transform learning&ndash;both on-campus and worldwide. Anant Agarwal, former Director of MIT's Computer Science and Artificial Intelligence Laboratory, serves as the first president of edX. EdX's goals combine the desire to reach out to students of all ages, means, and nations, and to deliver these teachings from a faculty who reflect the diversity of its audience. EdX is based in Cambridge, Massachusetts and is governed by MIT and Harvard.</p>
+        <h2>Acerca de los MOOC y el conocimiento abierto</h2>
+			<p>Los MOOC (Massive Open Online Course) son cursos en línea abiertos y masivos, es decir, cursos de acceso abierto que se realizan a través del web y están enfocados a la participación interactiva a gran escala. Son un desarrollo reciente de la educación a distancia, fundado sobre años de investigación y experimentación en elearning. Además de materiales de estudio escritos, gráficos o vídeos, incluyen típicamente foros de debate y otros mecanismos que contribuyen a crear comunidades de aprendizaje.</p>
+			<p>Los <a href="http://www.uji.es/uji/norm/estatuts/">estatutos</a> de la Universitat Jaume I recogen, en su disposición adicional séptima, el fomento de la libre difusión del conocimiento creado por la comunidad universitaria. Desde 2006, la Universitat Jaume I ha promocionado la creación de materiales libres de calidad contrastada que se puedan usar en sus clases oficiales y, al mismo tiempo, puedan ser reutilizados por cualquier persona en cualquier parte del mundo. Cabe destacar, entre otras iniciativas, la colección <a href="http://sapientia.uji.es">Sapientia</a> y el portal <a href="http://ocw.uji.es">OpenCourseWare</a>. En 2013, la Universitat Jaume I abrió una <a href="http://www.uji.es/perfils/pdipas/pdi/moocs/conv1314/">convocatoria</a> dirigida a su profesorado para estimular la producción de MOOC.</p>
       </article>
       <hr class="fade-right-hr-divider">
     </section>
@@ -37,22 +37,19 @@
         <img src="${static.url('images/university/harvard/about-harvard.jpg')}">
       </div>
       <article>
-        <h2>Harvard University</h2>
-        <p>Harvard University is devoted to excellence in teaching, learning, and research, and to developing leaders in many disciplines who make a difference globally. Harvard faculty are engaged with teaching and research to push the boundaries of human knowledge.  The University has twelve degree-granting Schools in addition to the Radcliffe Institute for Advanced Study.</p>
-        <p>Established in 1636, Harvard is the oldest institution of higher education in the United States. The University, which is based in Cambridge and Boston, Massachusetts, has an enrollment of over 20,000 degree candidates, including undergraduate, graduate, and professional students. Harvard has more than 360,000 alumni around the world.</p>
+        <h2>Acerca de la Universitat Jaume I</h2>
+			<p>La <a href="http://www.uji.es">Universitat Jaume I de Castellón</a> (UJI) es la universidad pública del norte de la Comunidad Valenciana, un territorio de la costa mediterránea europea situado entre las metrópolis de Valencia y Barcelona. Creada en el año 1991, la UJI se ha posicionado como una universidad de proximidad caracterizada por el trato personalizado, la agilidad de los procedimientos administrativos y un significativo nivel de participación de sus miembros en la vida universitaria, gracias entre otros factores a una población de cómodas dimensiones -con unos 15.000 estudiantes- y un campus integrado, de instalaciones modernas, funcionales y sostenibles.</p>
       </article>
       <hr class="fade-left-hr-divider">
     </section>
 
     <section class="message left">
       <div class="photo">
-        <img src="${static.url('images/university/mit/about-mit.jpg')}">
+        <img src="${static.url('images/edx-logo-large-color.png')}">
       </div>
       <article>
-        <h2>Massachusetts Institute of Technology</h2>
-        <p>The Massachusetts Institute of Technology &mdash; a coeducational, privately endowed research university founded in 1861 &mdash; is dedicated to advancing knowledge and educating students in science, technology, and other areas of scholarship that will best serve the nation and the world in the 21st century. The Institute has close to 1,000 faculty and 10,000 undergraduate and graduate students. It is organized into five Schools: Architecture and Urban Planning; Engineering; Humanities, Arts, and Social Sciences; Sloan School of Management; and Science.</p>
-        <p>MIT's commitment to innovation has led to a host of scientific breakthroughs and technological advances. Achievements of the Institute's faculty and graduates have included the first chemical synthesis of penicillin and vitamin A, the development of inertial guidance systems, modern technologies for artificial limbs, and the magnetic core memory that made possible the development of digital computers. 78 alumni, faculty, researchers and staff have won Nobel Prizes.</p>
-        <p>Current areas of research and education include neuroscience and the study of the brain and mind, bioengineering, cancer, energy, the environment and sustainable development, information sciences and technology, new media, financial technology, and entrepreneurship.</p>
+        <h2>Acerca de edX</h2>
+        	<p>La Universitat Jaume I utiliza en sus MOOC la plataforma de código abierto <a href="http://code.edx.org">edX</a>, creada por el Massachusetts Institute of Technology (MIT) y la Harvard University. La primera versión pública del código fuente de edX es de junio de 2013, por lo que se debe entender que se trata de software en fase de pruebas y es posible que presente algunos errores o problemas.</p>
       </article>
     </section>
 
@@ -60,4 +57,3 @@
     </section>
   </section>
 </section>
-
