@@ -1,6 +1,17 @@
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
+MKTG_URL_LINK_MAP = {
+    'ABOUT': 'about_edx',
+    'CONTACT': 'contact',
+    'FAQ': 'faq_edx',
+    'COURSES': 'courses',
+    'ROOT': 'root',
+    'TOS': 'tos',
+    'HONOR': 'honor',
+    'PRIVACY': 'privacy_edx',
+}
+
 DEFAULT_FROM_EMAIL = 'mooc@uji.es'
 DEFAULT_FEEDBACK_EMAIL = 'mooc@uji.es'
 SERVER_EMAIL = 'mooc@uji.es'
