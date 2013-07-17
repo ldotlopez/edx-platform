@@ -1,7 +1,7 @@
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-DEFAULT_FROM_EMAIL = 'registration@mooc.uji.es'
-DEFAULT_FEEDBACK_EMAIL = 'feedback@mooc.uji.es'
-SERVER_EMAIL = 'devops@mooc.uji.es'
+DEFAULT_FROM_EMAIL = 'mooc@uji.es'
+DEFAULT_FEEDBACK_EMAIL = 'mooc@uji.es'
+SERVER_EMAIL = 'mooc@uji.es'
 ADMINS = (
     ('edX Admins', 'lopezl@sg.uji.es'),
 )
