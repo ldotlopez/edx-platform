@@ -20,3 +20,10 @@ FORCE_SCRIPT_NAME = ''
 SITE_NAME = "mooc.uji.es"
 HTTPS = 'no'
  
+
+COMMENTS_SERVICE_KEY = "pepito"
+COMMENTS_SERVICE_URL = "http://localhost:8082/"
+
+
+DEBUG = True
+TEMPLATE_DEBUG = True
