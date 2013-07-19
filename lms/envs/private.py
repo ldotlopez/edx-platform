@@ -1,3 +1,5 @@
+from .common import ENV_ROOT
+from logsettings import get_logger_config
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
@@ -28,7 +30,6 @@ FAVICON_PATH = 'images/uji.ico'
 TIME_ZONE = 'Europe/Madrid'  # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 FORCE_SCRIPT_NAME = ''
 
-
 #UJI: from lms/envs/common.py modifications
 SITE_NAME = "mooc.uji.es"
 HTTPS = 'no'
@@ -39,3 +40,9 @@ COMMENTS_SERVICE_URL = "http://localhost:8082/"
 DEBUG = True
 TEMPLATE_DEBUG = True
 
+LOGGING = get_logger_config(ENV_ROOT / "log",
+                            logging_env="uji",
+                            local_loglevel="DEBUG",
+                            dev_env=False,
+                            debug=True)
+ 

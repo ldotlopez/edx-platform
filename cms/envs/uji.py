@@ -11,19 +11,18 @@ from logsettings import get_logger_config
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 LOGGING = get_logger_config(ENV_ROOT / "log",
-                            logging_env="uji",
+                            logging_env="dev",
                             tracking_filename="tracking.log",
-                            dev_env=False,
+                            dev_env=True,
                             debug=True)
 
 modulestore_options = {
     'default_class': 'xmodule.raw_module.RawDescriptor',
     'host': 'localhost',
     'db': 'xmodule',
-    #uji: 'db': 'uji_xmodule',
     'collection': 'modulestore',
     'fs_root': GITHUB_REPO_ROOT,
-    'render_template': 'mitxmako.shortcuts.render_to_string'
+    'render_template': 'mitxmako.shortcuts.render_to_string',
 }
 
 MODULESTORE = {
@@ -43,7 +42,6 @@ CONTENTSTORE = {
     'ENGINE': 'xmodule.contentstore.mongo.MongoContentStore',
     'OPTIONS': {
         'host': 'localhost',
-        #'db': 'uji_xcontent',
         'db': 'xcontent',
     },
     # allow for additional options that can be keyed on a name, e.g. 'trashcan'
@@ -59,18 +57,10 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': ENV_ROOT / "db" / "mitx.db",
     }
-    # UJI: settings for mysql
-    #'default': {
-    #    'ENGINE': 'django.db.backends.mysql',
-    #    'NAME': 'edx',
-    #    'USER': 'edx',
-    #    'PASSWORD': 'edx',
-    #    'PORT' : ''
-    #}
 }
 
-LMS_BASE = "mooc.uji.es"
-MITX_FEATURES['PREVIEW_LMS_BASE'] = "mooc.uji.es"
+LMS_BASE = "localhost:8000"
+MITX_FEATURES['PREVIEW_LMS_BASE'] = "localhost:8000"
 
 REPOS = {
     'edx4edx': {
