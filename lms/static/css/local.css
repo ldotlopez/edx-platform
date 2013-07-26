@@ -1,3 +1,7 @@
+section.home a.media {
+	display: none;
+}
+
 div.hero {
 	display: none;
 }
