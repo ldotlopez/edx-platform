@@ -41,3 +41,7 @@ div.colophon-about {
 div#field-honorcode {
 	display: none;
 }
+
+label.honor-code {
+	display: none;
+}
