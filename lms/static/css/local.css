@@ -37,3 +37,7 @@ div.colophon-about {
 .news-carousel {
 	display: none;
 }
+
+div#field-honorcode {
+	display: none;
+}
