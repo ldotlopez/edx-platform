@@ -236,13 +236,13 @@
 
             <div class="field required checkbox" id="field-tos">
               <input id="tos-yes" type="checkbox" name="terms_of_service" value="true" required aria-required="true" />
-              <label for="tos-yes">I agree to the <a href="${marketing_link('TOS')}" class="new-vp">Terms of Service</a></label>
+              <label for="tos-yes">Conozco la <a href="http://www.uji.es/CA/organs/sg/polgen.thtml" class="new-vp">Política general de seguridad de la información</a> de la Universitat Jaume I</label>
             </div>
 
             % endif
 
             <div class="field required checkbox" id="field-honorcode">
-              <input id="honorcode-yes" type="checkbox" name="honor_code" value="true" />
+              <input id="honorcode-yes" type="checkbox" name="honor_code" value="true" checked="checked" />
               <%
                 ## TODO: provide a better way to override these links
                 if self.stanford_theme_enabled():
