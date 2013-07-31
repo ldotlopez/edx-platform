@@ -242,7 +242,7 @@
             % endif
 
             <div class="field required checkbox" id="field-honorcode">
-              <input id="honorcode-yes" type="checkbox" name="honor_code" value="true" checked="checked" />
+              <input id="honorcode-yes" type="checkbox" name="honor_code" value="true" />
               <%
                 ## TODO: provide a better way to override these links
                 if self.stanford_theme_enabled():
@@ -250,7 +250,7 @@
                 else:
                   honor_code_path = marketing_link('HONOR')
               %>
-              <label for="honorcode-yes">I agree to the <a href="${honor_code_path}" class="new-vp">Honor Code</a></label>
+              <label for="honorcode-yes">Acepto las <a href="${honor_code_path}" class="new-vp">pautas de comportamiento</a></label>
             </div>
           </li>
         </ol>

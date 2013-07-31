@@ -38,6 +38,7 @@ div.colophon-about {
 	display: none;
 }
 
+/* Honor code 
 div#field-honorcode {
 	display: none;
 }
@@ -45,6 +46,7 @@ div#field-honorcode {
 label.honor-code {
 	display: none;
 }
+*/
 
 @font-face {
     font-family: 'Open Sans';
